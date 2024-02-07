@@ -1,16 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style1.css'; 
+import '../style1.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault(); // Prevent default form submission
     if (username.trim() !== '' && password.trim() !== '') {
+      // Perform login action if credentials are valid
       alert('Successfully logged in!');
+      // Navigate to the Home page
+      // Replace '/Home' with the correct path if needed
+      window.location.href = '/Home';
     } else {
       alert('Username and password are required.');
     }
@@ -40,19 +44,19 @@ function Login() {
           />
           <label htmlFor="password">Password</label>
         </div>
-        <a href="#" onClick={handleLogin}>
+        <Link to='/Home' onClick={handleLogin}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Login 
-        </a>
-        <Link to="/signup">
+          Login
+        </Link>
+        <Link to="/Signup">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Signup
+          Sign up
         </Link>
       </form>
     </div>

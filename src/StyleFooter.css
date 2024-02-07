@@ -1,0 +1,48 @@
+
+.rectangle .a1 {
+    margin-left: 50px;
+    margin-top: 60px;
+}
+.rectangle .a2 {
+    margin-left: 150px;
+    margin-top: 60px;
+}
+.rectangle .a2 .card-text {
+    color: rgb(243, 240, 240);
+}
+
+h0{ 
+    color: beige;
+}
+.rectangle {
+    margin-left: 55px;
+    color: antiquewhite;
+    margin-right: 55px;
+    border-radius: 30px;
+    width: 1400px; /* largeur du rectangle */
+    height: 330px; 
+    background-color:rgb(2, 79, 2);
+}
+
+.rectangle .adem img{
+    height: 150px;
+    width: 250px;
+    margin-left: 60px;
+    margin-top: 60px;
+    
+}
+.rectangle .adem {
+    margin-left: 700px;
+}
+.rectangle .ligne55 {
+    background-color: white; /* Change 'color' to 'background-color' if you want a background */
+    
+    margin-left: 55px;
+    margin-right: 55px;
+    display: block; /* Ensure the line is displayed as a block element */
+}
+
+.rectangle .az {
+    text-align: center;
+    margin-bottom: 20px;
+}

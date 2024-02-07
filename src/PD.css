@@ -1,0 +1,184 @@
+.image img {
+    margin-left: 50px;
+    height: 100px;
+    width: 400px;
+    height: 400px;
+    margin-top: -29px;
+    
+} 
+.marg {
+    margin-left:200px;
+    
+}
+.marg .B{
+    margin-top: 20px;
+}
+.ligne {
+    border: none; 
+    margin-left: 55px;
+    margin-right: 55px;
+    height: 2px; 
+    background-color: black;
+}
+.marg .ligne {
+    border: none; 
+    margin-top: -100px;
+    height: 2px; 
+    width: 400px;
+    background-color: black;
+}
+.marg .p2 {
+    margin-top: -10px;
+}
+.circle1 {
+    width: 40px;
+    height: 40px; 
+    background-color: #f00;
+    border-radius: 50%; 
+}
+.circle2 {
+    width: 40px; /* Largeur du cercle */
+    margin-left: 7px;
+    height: 40px; /* Hauteur du cercle (même que la largeur pour obtenir un cercle parfait) */
+    background-color: rgb(34, 0, 255); /* Couleur de fond du cercle */
+    border-radius: 50%; 
+}
+.circle3 {
+    width: 40px; /* Largeur du cercle */
+    margin-left: 7px;
+    height: 40px; /* Hauteur du cercle (même que la largeur pour obtenir un cercle parfait) */
+    background-color: silver; /* Couleur de fond du cercle */
+    border-radius: 50%; 
+}
+.circle4 {
+    width: 40px; /* Largeur du cercle */
+    margin-left: 7px;
+    height: 40px; /* Hauteur du cercle (même que la largeur pour obtenir un cercle parfait) */
+    background-color: rgb(241, 236, 236); /* Couleur de fond du cercle */
+    border: 2px solid black; 
+    border-radius: 50%; 
+}
+.marg .a h6{
+    margin-left:300px;
+    margin-top: 20px;
+}
+.marg .rectangle {
+    width: 120px; /* Largeur du rectangle */
+    height: 40px; /* Hauteur du rectangle */
+    margin-left: 0px;
+    background-color: silver;
+    color: black;
+    border-radius: 30px; /* Rayon de 5 pixels pour les coins arrondis */
+}
+.marg .rectangle h5{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.marg .rectangle button{
+    margin-left: 16px;
+    border: none; 
+    background: none; 
+}
+.marg .st {
+    margin-left: -10px;
+    color: green;
+}
+.marg .st2 {
+    margin-left: 10px;
+    color: red;
+}
+.Bou1 button {
+    height: 40px;
+    width: 160px;
+    background-color:green;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s; 
+}
+
+.Bou1 button:hover {
+    background-color: green; 
+    transform: scale(0.8); 
+}
+.Bou2 button {
+    margin-left: 30px;
+    height: 40px;
+    width: 160px;
+    background-color:rgb(250, 252, 250);
+    color: black;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s; /* Ajoute une transition fluide */
+}
+
+.Bou2 button:hover {
+    background-color: rgb(234, 243, 234); 
+    transform: scale(0.8); 
+}
+.im1 img {
+    height: 115px;
+    margin-top: -30px;
+    margin-left: 50px;
+}
+.im2 img {
+    height: 115px;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+.e11 {
+    margin-left: 10px;
+}
+.circl {
+    width: 40px; /* Largeur du cercle */
+    height: 40px; /* Hauteur du cercle (même que la largeur pour obtenir un cercle parfait) */
+    background-color: #f00; /* Couleur de fond du cercle */
+    border-radius: 50%; 
+    margin-left: 60px;
+}
+.nom h6{
+    color: green;
+    margin-left: -130px;
+}
+.comm {
+    margin-left: -130px;
+    
+    margin-top: -10px;
+}
+.carre {
+    width: 100px; 
+    height: 80px; /* Hauteur du carré */
+    background-color: blue; /* Couleur de fond */
+    margin-left: 130px;
+    margin-top: -18px;
+}
+.sm .text-body-secondary{
+    margin-left: 130px;
+    margin-top: -10px;
+}
+.e10 {
+    margin-left: 30px;
+}
+.ligne5 {
+    margin-left: 130px;
+    margin-right: 1000px;
+}
+.circle1.selected::before {
+    content: '\2714';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px; 
+  }
+   .text-body-secondary{
+    color: black;
+  }
+  .checkmark {
+    font-size: 24px; 
+    color:white;
+    
+    position: absolute;
+  }

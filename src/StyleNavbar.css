@@ -1,0 +1,58 @@
+
+.navbar {
+    background-color:white;
+    padding: 15px; 
+    color: #fff; 
+  }
+  
+  .navbar-brand img {
+    width: 70px; 
+    height: auto; 
+  }
+  
+  
+  .navbar-nav .nav-link {
+    color: #150b0b; /* Couleur du texte des liens */
+    margin-right: 15px; /* Marge à droite entre les liens */
+  }
+
+  .navbar-nav .nav-link.active {
+    font-weight: bold; /* Texte en gras pour le lien actif */
+  }
+  
+ 
+  .navbar-nav .nav-item.dropdown:hover .nav-link {
+    background-color: #2980b9; 
+    color: #fff; 
+  }
+  
+  
+  .dropdown-menu {
+    background-color: #3498db;
+  }
+  
+
+  .dropdown-item {
+    color: #fff; 
+  }
+  
+  /* Style de la barre de recherche */
+  .form-control {
+    margin-right: 15px; /* Marge à droite entre la barre de recherche et le bouton */
+  }
+  
+  /* Style du bouton de recherche */
+  .btn-outline-success {
+    color: #fff; /* Couleur du texte du bouton de recherche */
+    border-color: #632020; /* Couleur de la bordure du bouton de recherche */
+  }
+  
+  /* Style au survol du bouton de recherche */
+  .btn-outline-success:hover {
+    background-color: #fff; /* Couleur de fond au survol du bouton de recherche */
+    color: #3498db; /* Couleur du texte au survol du bouton de recherche */
+  }
+  .navbar .navbar-expand-lg .bg-body-tertiary{
+    background-color: aliceblue;
+}
+  

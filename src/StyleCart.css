@@ -1,0 +1,85 @@
+.cart {
+    margin-left: 55px;
+}
+.cart img {
+    height: 140px;
+    width: 140px;
+}
+.cart .A{
+    margin-left: 20px;
+    margin-top: -5px;
+}
+.cart .A h6{
+    margin-top: -5px   ;
+    color: green;
+}
+.rectangle2 {
+    width: 100px; /* Largeur du rectangle */
+    height: 35px; /* Hauteur du rectangle */
+    margin-left: 60px;
+    background-color: silver;
+    color: black;
+    border-radius: 30px; /* Rayon de 5 pixels pour les coins arrondis */
+}
+ .rectangle2 h5{
+    margin-left: 18px;
+    margin-top: 5px;
+}
+ .rectangle2 button{
+    margin-left: 10px;
+    border: none; 
+    background: none; 
+}
+.cart .tot h6{
+    margin-left: 40px;
+}
+.cart .Bout button{
+    background-color: rgb(11, 234, 11);
+    border-radius: 30px;
+    margin-left: 100px;
+    color: white;
+    height: 40px;
+    width: 120px;
+}
+.carro2 {
+    width: 280px; /* Largeur du rectangle */
+    height: 180px; /* Hauteur du rectangle */
+    margin-left:130%;
+    background-color: rgb(232, 189, 189);
+    color: black;
+    border-radius: 10px; /* Rayon de 5 pixels pour les coins arrondis */
+}
+.cart .carro2 h6{
+    text-align: center;
+    margin-top: -10px;
+}
+.cart .carro2 p{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.cart .carro2 .p2{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: -10px;
+}
+.cart .carro2 .p3{
+    color: green;
+    margin-left: 130px;
+    margin-top: 0px;
+}
+.cart .carro2 .Pay {
+    color:white;
+    background-color: green;
+    margin-left: 60px;
+    border-radius: 30px;
+    width: 150px;
+}
+.cart .ligne12{
+    border: none; 
+    margin-top: -20px;
+    height: 2px; 
+    width: 800px;
+    margin-right: 800px;
+    background-color: black;
+}
