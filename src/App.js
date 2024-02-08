@@ -20,8 +20,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           {/* Paths should match the component names and case sensitivity matters */}
-          <Route index element={<FetchData />} />
-          {/* <Route index element={<Authentification />} /> */}
+          <Route index element={<FetchData />} /> 
+           {/* <Route index element={<Authentification />} />  */}
           {/* <Route path='/Login2' element={<Login2 />} /> */}
           {/* <Route path="/Signup" element={<Signup />} /> */}
           {/* <Route path="/Home" element={<Home />} /> */}
