@@ -20,15 +20,15 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           {/* Paths should match the component names and case sensitivity matters */}
-          <Route index element={<FetchData />} /> 
-           {/* <Route index element={<Authentification />} />  */}
-          {/* <Route path='/Login2' element={<Login2 />} /> */}
+          <Route index element={<FetchData />} />  
+           {/* <Route index element={<Authentification />}/> */}
+         {/* <Route path='/Login2' element={<Login2 />} />  */}
           {/* <Route path="/Signup" element={<Signup />} /> */}
-          {/* <Route path="/Home" element={<Home />} /> */}
-          {/* <Route path="/PDetails" element={<ProductDetails />} /> */}
-          {/* <Route path="/SeedStock" element={<SeedStock />} /> */}
-          <Route path="/Cuttings" element={<Cuttings />} />
-          <Route path="/Merch" element={<Merch />} />
+           {/* <Route path="/Home" element={<Home />} />  */}
+         {/* <Route path="/PDetails" element={<ProductDetails />} />  */}
+           {/* <Route path="/SeedStock" element={<SeedStock />} />  */}
+          {/* <Route path="/Cuttings" element={<Cuttings />} /> */}
+          {/* <Route path="/Merch" element={<Merch />} /> */}
           <Route path="/Cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
