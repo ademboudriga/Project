@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
 import { faCartShopping, fauUer, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function Navbar() {
   return (
@@ -33,7 +34,7 @@ export default function Navbar() {
         </Dropdown>
 
             <li className="nav-item">
-              <Link to="/contactus" className="nav-link">
+              <Link to="/Contact" className="nav-link">
                 Contact us
               </Link>
             </li>

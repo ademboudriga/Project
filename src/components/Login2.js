@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import axios from 'axios'; // Import axios for making HTTP requests
-
+import { jwtDecode } from "jwt-decode";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import adem from './adem.jpg'; // Import adem image
 import '../styleLS.css'; // Import custom CSS
 import { Button } from 'react-bootstrap';
+import * as Buffer from 'buffer';
+
 
 function Login2() {
     const url = "http://135.125.203.248:8000/authentication/login/"; // URL for login endpoint
@@ -22,16 +24,20 @@ function Login2() {
         setData(newdata);
         console.log(newdata);
     }
-
     function submite(e) {
         e.preventDefault();
+         const jwt =require("jsonwebtoken");
+        const secret = "dillion-secret";
+        const token = jwt.sign({accesss : "res.data.access"}, secret);
+        const decoded = jwt.decode(token)
         axios.post(url, { 
                 username: data.username,
                 password: data.password
             })
             .then(res => {
-                console.log(res.data); 
-                 window.location.href = '/Home';
+                console.log(res.data.access);
+                 console.log(decoded)
+                //  window.location.href = '/Home';
             })
             .catch(error => {
                 console.error('Error during login:', error);
@@ -41,6 +47,7 @@ function Login2() {
                 // Handle login error here, such as displaying an error message to the user
             });
     }
+    
     const handlSignup = (e) => {
       e.preventDefault();
       
@@ -52,9 +59,11 @@ function Login2() {
     // Function to handle login button click
     const handleLogin = (e) => {
         e.preventDefault();
+       
         if (data.username.trim() !== '' && data.password.trim() !== '') {
             alert('Successfully logged in!'); // Display alert for successful login
-            window.location.href = '/Home';
+            // window.location.href = '/Home';
+            
             // Redirect to '/Home' or perform other actions upon successful login
         } else {
             alert('Username and password are required.'); // Display alert if username or password is empty
@@ -75,17 +84,17 @@ function Login2() {
                             <div className="login-box">
                                 <h2>Login</h2>
                                 <form >
-                                    <div className="user-box">
-                                        <input
-                                            type="text"
-                                            id='username'
-                                            name='username'
-                                            required
-                                            value={data.username}
-                                            onChange={(e) => handle(e)}
-                                        />
-                                        <label htmlFor="username">Username</label>
-                                    </div>
+                                <div className="user-box">
+                      <input
+                        type="text"
+                        id='username'
+                        name='username'
+                        required
+                        value={data.username}
+                        onChange={(e) => handle(e)}
+                      />
+                      <label htmlFor="username">Nom d'utilisateur</label>
+                    </div>
                                     <div className="user-box">
                                         <input
                                             type="password"
@@ -97,7 +106,7 @@ function Login2() {
                                         <label htmlFor="password">Password</label>
                                     </div>
                                     <table><tbody><tr>
-                                    <td><div className='Lo'><Button  type="submit"onSubmit={submite}>Login</Button></div></td>
+                                    <td><div className='Lo'><Button  type="submit"onClick={submite}>Login</Button></div></td>
                                     <td><div className='Lo'><Button  type="submit"onClick={ handlSignup}>Sign up</Button></div></td> </tr></tbody></table>
                                 </form>
                             </div>

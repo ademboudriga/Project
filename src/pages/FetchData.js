@@ -1,45 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; // Import axios only once
 
-import '../F.css';
 
 function FetchData() {
-    const [authData, setAuthData] = useState(null);
+    const [bitcoinData, setBitcoinData] = useState(null); // Define bitcoinData state
 
     useEffect(() => {
-        axios.get('http://135.125.203.248:8000/authentication/usersList/')
+        axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
             .then(response => {
-                setAuthData(response.data);
+                setBitcoinData(response.data);
             })
             .catch(error => {
-                console.error('Error fetching Auth data:', error);
+                console.error('Error fetching Bitcoin data:', error);
             });
     }, []);
 
     return (
         <div>
-            <h2>Authentication</h2>
-            {authData && (
+            <h2>Bitcoin Price</h2>
+            {bitcoinData && (
                 <div>
-                    <p><strong>Count:</strong> {authData.count}</p>
-                    <p><strong>Next:</strong> <a href='/FD2'>{authData.next}</a></p>
-                    <p><strong>Previous:</strong> {authData.previous}</p>
-                    <h4>Results:</h4>
-                    {authData.results && authData.results.map(user => (
-                        <div key={user.id}>
-                            <p><strong>ID:</strong> {user.id}</p>
-                            <p><strong>Username:</strong> {user.username}</p>
-                            <p><strong>First Name:</strong> {user.first_name}</p>
-                            <p><strong>Last Name:</strong> {user.last_name}</p>
-                            {user.profile && (
-                                <div>
-                                    <p><strong>Profile Image:</strong></p>
-                                    <div className='sayyebz'><img src={`http://135.125.203.248:8000/${user.profile.profile_image}`} alt="Profile" /></div>
-                                    <p><strong>Phone Number:</strong> {user.profile.phone_number}</p>
-                                </div>
-                            )}
-                            <hr />
-                        </div>
+                    <h4>Time:</h4>
+                    {Object.keys(bitcoinData.time).map(key => (
+                        <h4 key={key}>
+                            {key}: {bitcoinData.time[key]}
+                        </h4>
+                    ))}
+                </div>
+            )}
+            {bitcoinData && (
+                <div>
+                    <p ><h4>Disclaimer :</h4> {bitcoinData.disclaimer}</p>
+                    <p key="chartName"><h4>Chart Name</h4>: {bitcoinData.chartName}</p>
+                    <h3> BPI</h3>
+                    <h4>USD: </h4>
+                    {Object.keys(bitcoinData.bpi.USD).map(key => (
+                        <h4 key={key}>
+                            {key}: {bitcoinData.bpi.USD[key]}
+                        </h4>
                     ))}
                 </div>
             )}
@@ -50,11 +48,7 @@ function FetchData() {
 export default FetchData;
 
 
-   /*{Object.keys(currencies).map((key) => (
-                <h2 key={key}>
-                    {key}: {currencies[key]}
-                </h2>
-            ))}*/
+
 
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios'; // Import axios only once

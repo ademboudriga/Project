@@ -1,0 +1,64 @@
+ .reccont {
+    
+    width: 900px; /* Largeur */
+    height: 500px; /* Hauteur */
+    margin-left: 350px;
+    background-color: #34db3c; /* Couleur de fond */
+    border: 2px solid #3fb929; /* Bordure solide de 2px */
+    border-radius: 10px; /* Bord arrondi */
+
+
+ }
+ .reccont h3{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+  
+ }
+ .reccont .contactus .a1 {
+    margin-left: 150px;
+    margin-top: 10px;
+   
+  }
+ .reccont .contactus .a1 input{
+    border-radius: 10px;
+    height: 45px;
+    width: 250px;
+  }
+  .reccont .contactus .a1 .a2 {
+    margin-left: 95px;
+   
+  }
+  .reccont .contactus .a3 {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 150px;
+    height: 150px;
+    width: 600px;
+    vertical-align: top; 
+  }
+   .reccont .contactus .a3 input {
+    border-radius: 10px;
+    height: 100%; /* Ajuste la hauteur de l'input */
+    width: 100%; /* Ajuste la largeur de l'input */
+  }
+  .reccont .contactus .a4 {
+    height: 40px;
+    width: 140px;
+    margin-left: 370px;
+    margin-top: 10px;
+  }
+  .reccont .contactus .a4 button{
+    background-color: aliceblue;
+      color: black;
+      
+      border-radius: 30px;
+      height: 50px;
+      width: 170px;
+      font-size: 18px;
+      transition: all 0.3s; /* Ajoute une transition fluide */
+  }
+  .reccont .contactus .a4 button:hover {
+    background-color: green; 
+    transform: scale(1.4); 
+  }

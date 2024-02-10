@@ -156,7 +156,7 @@ export default function ProductDetails() {
                 <div className='ad'><h3>Products For you!</h3></div>
                 <hr className="ligne" />
                 <Carousel responsive={responsive}>
-                  <div className='Produit'>
+                  <div className='Produit2'>
                   
  
  <div className="card" style={{ width: '14.5rem', height: '15rem' }}> 
@@ -189,7 +189,7 @@ export default function ProductDetails() {
 
 
     </div>
-    <div className='Produit'>
+    <div className='Produit3'>
                   
  
                   <div className="card" style={{ width: '14.5rem', height: '15rem' }}> 
@@ -222,7 +222,7 @@ export default function ProductDetails() {
                  
                  
                      </div>
-                     <div className='Produit'>
+                     <div className='Produit3'>
                   
  
                   <div className="card" style={{ width: '14.5rem', height: '15rem' }}> 
@@ -255,7 +255,7 @@ export default function ProductDetails() {
                  
                  
                      </div>
-                     <div className='Produit'>
+                     <div className='Produit3'>
                   
  
                   <div className="card" style={{ width: '14.5rem', height: '15rem' }}> 
