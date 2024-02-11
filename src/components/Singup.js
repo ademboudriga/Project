@@ -36,7 +36,7 @@ const Signup = () => {
       console.log(res.data);
       alert('Inscription réussie !'); // Successful signup message
       // Redirect to Home page or perform any other action upon successful signup
-      window.location.href = '/Home';
+      window.location.href = '/Login2';
     })
     .catch(error => {
       console.error('Error during signup:', error);

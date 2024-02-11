@@ -26,27 +26,28 @@ function Login2() {
     }
     function submite(e) {
         e.preventDefault();
-         const jwt =require("jsonwebtoken");
-        const secret = "dillion-secret";
-        const token = jwt.sign({accesss : "res.data.access"}, secret);
-        const decoded = jwt.decode(token)
         axios.post(url, { 
-                username: data.username,
-                password: data.password
-            })
-            .then(res => {
-                console.log(res.data.access);
-                 console.log(decoded)
-                //  window.location.href = '/Home';
-            })
-            .catch(error => {
-                console.error('Error during login:', error);
-                console.log('here is the error',error);
-                alert('there is an error in the credentials');
-                // div_error = 'fix the data'
-                // Handle login error here, such as displaying an error message to the user
-            });
+            username: data.username,
+            password: data.password
+        })
+        .then(res => {
+            console.log(res.data.access);
+            const decoded = jwtDecode(res.data.access);
+            console.log(decoded); // Afficher le décodage de l'access token dans la console
+            const decodedString = JSON.stringify(decoded); // Convertir l'objet en une chaîne de caractères
+            localStorage.setItem('accessToken', decodedString); // Stocker l'access token dans le local storage
+            
+            // Afficher les informations de local storage dans la console
+            const storedAccessToken = localStorage.getItem('accessToken');
+            console.log('Access Token stored in local storage:', storedAccessToken);
+        })
+        .catch(error => {
+            console.error('Error during login:', error);
+            alert('There is an error in the credentials');
+        });
     }
+    
+    
     
     const handlSignup = (e) => {
       e.preventDefault();
@@ -64,7 +65,7 @@ function Login2() {
             alert('Successfully logged in!'); // Display alert for successful login
             // window.location.href = '/Home';
             
-            // Redirect to '/Home' or perform other actions upon successful login
+   
         } else {
             alert('Username and password are required.'); // Display alert if username or password is empty
         }
@@ -85,7 +86,7 @@ function Login2() {
                                 <h2>Login</h2>
                                 <form >
                                 <div className="user-box">
-                      <input
+                                <input
                         type="text"
                         id='username'
                         name='username'
@@ -106,7 +107,12 @@ function Login2() {
                                         <label htmlFor="password">Password</label>
                                     </div>
                                     <table><tbody><tr>
-                                    <td><div className='Lo'><Button  type="submit"onClick={submite}>Login</Button></div></td>
+                                    <td>
+    <div className='Lo'>
+        <Button type="submit" onClick={(e) => { submite(e); handleLogin(e); }}>Login</Button>
+    </div>
+</td>
+
                                     <td><div className='Lo'><Button  type="submit"onClick={ handlSignup}>Sign up</Button></div></td> </tr></tbody></table>
                                 </form>
                             </div>

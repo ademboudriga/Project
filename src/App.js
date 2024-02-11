@@ -14,12 +14,12 @@ import Authentification from './pages/Authentification'; // Corrected import pat
 import Cart from './pages/Cart'
 import Login2 from './components/Login2';
 import FetchData from './pages/FetchData';
+import Count from './pages/Count';
 export default function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          {/* Paths should match the component names and case sensitivity matters */}
          {/* <Route index element={<FetchData />} />  */}
            <Route index element={<Authentification />}/>
          <Route path='/Login2' element={<Login2 />} /> 
@@ -31,6 +31,7 @@ export default function App() {
           <Route path="/Cuttings" element={<Cuttings />} />
           <Route path="/Merch" element={<Merch />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Count" element={<Count />} />
         </Routes>
       </BrowserRouter>
     </div>

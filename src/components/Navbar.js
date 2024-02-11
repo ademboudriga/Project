@@ -46,8 +46,8 @@ export default function Navbar() {
             </button>
           </form>
           <li className="nav-item">
-              <Link to="/community" className="nav-link">
-              <FontAwesomeIcon icon={faUser} style={{ color: "green" }} />Account
+              <Link to="/Count" className="nav-link">
+              <FontAwesomeIcon icon={faUser} style={{ color: "green" }} />Count
               </Link>
             </li>
             <li className="nav-item">
