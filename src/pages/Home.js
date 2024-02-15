@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { Routes, Route } from 'react-router-dom';
 import Footer from '../components/Footer'; // Import the Navbar component
 import Navbar from '../components/Navbar'; // Import the Navbar component

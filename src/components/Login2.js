@@ -9,7 +9,6 @@ import '../styleLS.css'; // Import custom CSS
 import { Button } from 'react-bootstrap';
 import * as Buffer from 'buffer';
 
-
 function Login2() {
     const url = "http://135.125.203.248:8000/authentication/login/"; // URL for login endpoint
     const [data, setData] = useState({

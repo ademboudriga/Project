@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Contact from './pages/Contact'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Signup from './components/Singup'; 
 import SeedStock from './pages/SeedStock';
 import { ReactDOM } from 'react';
@@ -10,7 +9,7 @@ import Merch from './pages/Merch';
 import Cuttings from  './pages/Cuttings';
 import Home from './pages/Home';
 import ProductDetails from './components/ProductDetails';
-import Authentification from './pages/Authentification'; // Corrected import path
+import Authentification from './pages/Authentification'; 
 import Cart from './pages/Cart'
 import Login2 from './components/Login2';
 import FetchData from './pages/FetchData';
