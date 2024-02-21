@@ -79,7 +79,7 @@ export default function Home() {
     <div className="card" style={{ width: '14.5rem', height: '15rem' }}> 
     <Link to="/PDetails">
       <div className="image-container">
-        <img src={adem2} alt="Adem's image" />
+        <img src={ade} alt="Adem's image" />
         <div className="heart-icon">
           <FontAwesomeIcon icon={faHeart} />
         </div>
